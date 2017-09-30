@@ -13,8 +13,8 @@
          space available using match_parent in both dimensions. -->
     <FrameLayout
         android:id="@+id/container"
+        android:background="@drawable/rust_2"
         android:layout_width="match_parent"
-        android:background="@drawable/general_background"
         android:layout_height="match_parent" >
 
         <LinearLayout
@@ -785,7 +785,7 @@
         android:layout_width="@dimen/navigation_drawer_width"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:name="com.example.greg3d.visittimedispacher.NavigationDrawerFragment"
+        android:name="com.example.greg3d.visittimedispacher.activities.drawers.NavigationDrawerFragment"
         tools:layout="@layout/fragment_navigation_drawer" />
 
 </android.support.v4.widget.DrawerLayout>

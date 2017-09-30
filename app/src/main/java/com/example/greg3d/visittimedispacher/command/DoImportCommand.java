@@ -1,7 +1,7 @@
 package com.example.greg3d.visittimedispacher.command;
 
-import com.example.greg3d.visittimedispacher.FileListActivity;
-import com.example.greg3d.visittimedispacher.VisitTimeFixerActivity;
+import com.example.greg3d.visittimedispacher.activities.filelistactivity.FileListActivity;
+import com.example.greg3d.visittimedispacher.activities.visittimefixeractivity.VisitTimeFixerActivity;
 import com.example.greg3d.visittimedispacher.helpers.CSVHelper;
 import com.example.greg3d.visittimedispacher.helpers.DBHelper;
 

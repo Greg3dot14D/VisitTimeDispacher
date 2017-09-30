@@ -1,7 +1,7 @@
 package com.example.greg3d.visittimedispacher.command;
 
-import com.example.greg3d.visittimedispacher.SomeActivity;
-import com.example.greg3d.visittimedispacher.VisitTimeFixerActivity;
+import com.example.greg3d.visittimedispacher.activities.someactivity.SomeActivity;
+import com.example.greg3d.visittimedispacher.activities.visittimefixeractivity.VisitTimeFixerActivity;
 import com.example.greg3d.visittimedispacher.controller.DBController;
 import com.example.greg3d.visittimedispacher.model.DateRecord;
 

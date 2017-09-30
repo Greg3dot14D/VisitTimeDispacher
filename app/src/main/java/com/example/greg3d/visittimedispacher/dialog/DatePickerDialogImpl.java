@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.widget.DatePicker;
 
-import com.example.greg3d.visittimedispacher.VisitTimeFixerActivity;
 import com.example.greg3d.visittimedispacher.command.DateCommand;
 
 import java.text.DateFormat;

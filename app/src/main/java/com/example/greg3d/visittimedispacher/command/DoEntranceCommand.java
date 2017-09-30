@@ -1,8 +1,6 @@
 package com.example.greg3d.visittimedispacher.command;
 
-import android.widget.ImageButton;
-
-import com.example.greg3d.visittimedispacher.VisitTimeFixerActivity;
+import com.example.greg3d.visittimedispacher.activities.visittimefixeractivity.VisitTimeFixerActivity;
 import com.example.greg3d.visittimedispacher.controller.DBController;
 
 /**
@@ -14,10 +12,5 @@ public class DoEntranceCommand implements Command{
     public void execute() {
         DBController.doEntrance();
         VisitTimeFixerActivity.refresh();
-        //VisitTimeFixerActivity.setTimeToExit();
-//
-//        VisitTimeFixerActivity.instance.setX(VisitTimeFixerActivity.instance.controls.entrance_Button);
-//        VisitTimeFixerActivity.instance.setArrow(VisitTimeFixerActivity.instance.controls.exit_Button);
-//        VisitTimeFixerActivity.instance.unScaleControls();
     }
 }

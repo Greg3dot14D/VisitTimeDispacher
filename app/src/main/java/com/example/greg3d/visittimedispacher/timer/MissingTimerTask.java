@@ -1,6 +1,6 @@
 package com.example.greg3d.visittimedispacher.timer;
 
-import com.example.greg3d.visittimedispacher.VisitTimeFixerActivity;
+import com.example.greg3d.visittimedispacher.activities.visittimefixeractivity.VisitTimeFixerActivity;
 
 import java.util.TimerTask;
 

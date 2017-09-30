@@ -1,11 +1,12 @@
-package com.example.greg3d.visittimedispacher;
+package com.example.greg3d.visittimedispacher.activities.editrecordactivity;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.RadioButton;
-import android.widget.TextView;
 
+import com.example.greg3d.visittimedispacher.R;
+import com.example.greg3d.visittimedispacher.activities.someactivity.SomeActivity;
+import com.example.greg3d.visittimedispacher.activities.editrecordactivity.controls.Controls;
 import com.example.greg3d.visittimedispacher.command.DeleteCommand;
 import com.example.greg3d.visittimedispacher.command.SetDateEntranceCommand;
 import com.example.greg3d.visittimedispacher.command.SetDateExitCommand;
@@ -13,16 +14,15 @@ import com.example.greg3d.visittimedispacher.command.SetTimeEntranceCommand;
 import com.example.greg3d.visittimedispacher.command.SetTimeExitCommand;
 import com.example.greg3d.visittimedispacher.controller.DBController;
 import com.example.greg3d.visittimedispacher.css.CssManager;
-import com.example.greg3d.visittimedispacher.css.EditButtonCss;
 import com.example.greg3d.visittimedispacher.dialog.DatePickerDialogImpl;
 import com.example.greg3d.visittimedispacher.dialog.TimePickerDialogImpl;
 import com.example.greg3d.visittimedispacher.dialog.YesNoDialog;
 import com.example.greg3d.visittimedispacher.framework.factory.ActivityFactory;
-import com.example.greg3d.visittimedispacher.framework.annotations.FindBy;
 import com.example.greg3d.visittimedispacher.framework.helpers.ViewHelper;
 import com.example.greg3d.visittimedispacher.helpers.DBHelper;
 import com.example.greg3d.visittimedispacher.helpers.Tools;
 import com.example.greg3d.visittimedispacher.model.DateRecord;
+import com.example.greg3d.visittimedispacher.activities.visittimefixeractivity.VisitTimeFixerActivity;
 
 import java.util.Date;
 
@@ -38,51 +38,6 @@ public class EditRecordActivity extends Activity implements View.OnClickListener
     private Controls controls;
 
     private static EditRecordActivity instance;
-
-    public static class Controls{
-
-        @FindBy(R.id.tv_LabelEntrance)
-        public TextView labelEntrance;
-
-        @FindBy(R.id.tv_LabelExit)
-        public TextView labelExit;
-
-        @FindBy(R.id.rb_DayIsShort)
-        public RadioButton dayIsShort_RadioButton;
-
-        @FindBy(R.id.rb_DayIsLong)
-        public RadioButton dayIsLong_RadioButton;
-
-        @FindBy(R.id.rb_DayTypeWork)
-        public RadioButton dayTypeWork_RadioButton;
-
-        @FindBy(R.id.rb_DayTypeRest)
-        public RadioButton dayTypeRest_RadioButton;
-
-        @FindBy(R.id.rb_DayTypeOut)
-        public RadioButton dayTypeOut_RadioButton;
-
-        @FindBy(R.id.tv_DateEntrance)
-        public TextView dateEntrance_TextView;
-
-        @FindBy(R.id.tv_DateExit)
-        public TextView dateExit_TextView;
-
-        @FindBy(R.id.tv_TimeEntrance)
-        public TextView timeEntrance_TextView;
-
-        @FindBy(R.id.tv_TimeExit)
-        public TextView timeExit_TextView;
-
-        @FindBy(R.id.tv_Update)
-        public TextView updateButton;
-
-        @FindBy(R.id.tv_Delete)
-        public TextView delete_Button;
-
-        @FindBy(R.id.tv_Cancel)
-        public TextView cancel_Button;
-    }
 
     @Override
     protected void onDestroy() {

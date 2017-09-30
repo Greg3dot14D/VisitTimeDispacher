@@ -1,7 +1,7 @@
 package com.example.greg3d.visittimedispacher.command;
 
-import com.example.greg3d.visittimedispacher.SomeActivity;
-import com.example.greg3d.visittimedispacher.VisitTimeFixerActivity;
+import com.example.greg3d.visittimedispacher.activities.someactivity.SomeActivity;
+import com.example.greg3d.visittimedispacher.activities.visittimefixeractivity.VisitTimeFixerActivity;
 import com.example.greg3d.visittimedispacher.controller.DBController;
 
 import java.util.Calendar;
@@ -18,6 +18,5 @@ public class InsertCommand implements DateCommand{
         DBController.addNewRecord(date);
         SomeActivity.refresh();
         VisitTimeFixerActivity.refresh();
-        //ActivitiesManager.startEditRecordActivity(SomeActivity.getInstance(), DBController.getRecord(date).id);
     }
 }

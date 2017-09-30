@@ -5,10 +5,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 
-import com.example.greg3d.visittimedispacher.EditRecordActivity;
-import com.example.greg3d.visittimedispacher.FileListActivity;
-import com.example.greg3d.visittimedispacher.SomeActivity;
-import com.example.greg3d.visittimedispacher.VisitTimeFixerActivity;
+import com.example.greg3d.visittimedispacher.activities.editrecordactivity.EditRecordActivity;
+import com.example.greg3d.visittimedispacher.activities.filelistactivity.FileListActivity;
+import com.example.greg3d.visittimedispacher.activities.someactivity.SomeActivity;
+import com.example.greg3d.visittimedispacher.activities.visittimefixeractivity.VisitTimeFixerActivity;
 
 /**
  * Created by greg3d on 26.04.17.

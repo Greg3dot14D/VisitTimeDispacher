@@ -12,7 +12,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".VisitTimeFixerActivity"
+            android:name=".activities.visittimefixeractivity.VisitTimeFixerActivity"
             android:screenOrientation="portrait"
             android:label="@string/app_name" >
             <intent-filter>
@@ -22,7 +22,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SomeActivity"
+            android:name=".activities.someactivity.SomeActivity"
             android:screenOrientation="portrait"
             android:label="@string/app_name" >
             <intent-filter>
@@ -31,7 +31,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".FileListActivity"
+            android:name=".activities.filelistactivity.FileListActivity"
             android:screenOrientation="portrait"
             android:label="@string/app_name" >
             <intent-filter>
@@ -40,7 +40,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".EditRecordActivity"
+            android:name=".activities.editrecordactivity.EditRecordActivity"
             android:screenOrientation="portrait"
             android:label="@string/app_name" >
             <intent-filter>

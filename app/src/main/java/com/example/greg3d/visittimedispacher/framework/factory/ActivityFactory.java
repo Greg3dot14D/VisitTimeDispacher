@@ -14,7 +14,7 @@ import com.example.greg3d.visittimedispacher.framework.annotations.FindBy;
  */
 public class ActivityFactory {
 
-    public static <T extends Activity>void InitActivity(T activity, Object conteiner){
+    public static <T extends Activity> void InitActivity(T activity, Object conteiner){
         Field[] fields = conteiner.getClass().getDeclaredFields();
 
         for(Field field: fields){

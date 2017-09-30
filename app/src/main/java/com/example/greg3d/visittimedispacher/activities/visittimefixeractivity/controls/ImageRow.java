@@ -1,4 +1,4 @@
-package com.example.greg3d.visittimedispacher.controls;
+package com.example.greg3d.visittimedispacher.activities.visittimefixeractivity.controls;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;

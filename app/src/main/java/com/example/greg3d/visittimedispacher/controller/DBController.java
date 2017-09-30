@@ -1,9 +1,8 @@
 package com.example.greg3d.visittimedispacher.controller;
 
-import android.database.Cursor;
 import android.util.Log;
 
-import com.example.greg3d.visittimedispacher.VisitTimeFixerActivity;
+import com.example.greg3d.visittimedispacher.activities.visittimefixeractivity.VisitTimeFixerActivity;
 import com.example.greg3d.visittimedispacher.helpers.DBHelper;
 import com.example.greg3d.visittimedispacher.helpers.Tools;
 import com.example.greg3d.visittimedispacher.model.DateFormat;

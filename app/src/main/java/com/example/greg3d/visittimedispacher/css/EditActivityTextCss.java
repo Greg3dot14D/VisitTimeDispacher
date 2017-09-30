@@ -10,6 +10,7 @@ public class EditActivityTextCss extends BaseCss {
     private final float SHADOW_DY = 8f;          //float dy
     private final int SHADOW_COLOR = 0xFF676767; //int color
     private final int TEXT_COLOR = 0xFF443032;   // int color
+    //private final int TEXT_COLOR = 0xFF430fff;
     private final int TEXT_SIZE = 27;
 
     public float getShadowRadius(){

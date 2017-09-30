@@ -1,4 +1,4 @@
-package com.example.greg3d.visittimedispacher;
+package com.example.greg3d.visittimedispacher.activities.visittimefixeractivity;
 
 import android.app.Activity;
 import android.graphics.Bitmap;
@@ -18,19 +18,25 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.greg3d.visittimedispacher.activities.drawers.NavigationDrawerFragment;
+import com.example.greg3d.visittimedispacher.R;
+import com.example.greg3d.visittimedispacher.activities.visittimefixeractivity.controls.AverageTimeNumbers;
+import com.example.greg3d.visittimedispacher.activities.visittimefixeractivity.controls.Controls;
+import com.example.greg3d.visittimedispacher.activities.visittimefixeractivity.controls.DateNumbers;
+import com.example.greg3d.visittimedispacher.activities.visittimefixeractivity.controls.DateTextViewNumbers;
+import com.example.greg3d.visittimedispacher.activities.visittimefixeractivity.controls.Labels;
+import com.example.greg3d.visittimedispacher.activities.visittimefixeractivity.controls.MissingTimeNumbers;
+import com.example.greg3d.visittimedispacher.activities.visittimefixeractivity.controls.TimeToExitNumbers;
 import com.example.greg3d.visittimedispacher.command.DoEntranceCommand;
 import com.example.greg3d.visittimedispacher.command.DoExitCommand;
 import com.example.greg3d.visittimedispacher.command.SetDateFilterCommand;
 import com.example.greg3d.visittimedispacher.controller.DBController;
-import com.example.greg3d.visittimedispacher.controls.ImageRow;
+import com.example.greg3d.visittimedispacher.activities.visittimefixeractivity.controls.ImageRow;
 import com.example.greg3d.visittimedispacher.css.CssManager;
-import com.example.greg3d.visittimedispacher.css.LabelCss;
 import com.example.greg3d.visittimedispacher.dialog.DatePickerDialogImpl;
 import com.example.greg3d.visittimedispacher.dialog.YesNoDialog;
-import com.example.greg3d.visittimedispacher.framework.annotations.FindBy;
 import com.example.greg3d.visittimedispacher.framework.factory.ActivityFactory;
 import com.example.greg3d.visittimedispacher.framework.helpers.ViewHelper;
 import com.example.greg3d.visittimedispacher.helpers.DBHelper;
@@ -65,208 +71,19 @@ public class VisitTimeFixerActivity extends AppCompatActivity
 
     public Controls controls;
 
-    public static class Controls{
-        @FindBy(R.id.ib_in)
-        public ImageButton entrance_Button;
-
-        @FindBy(R.id.ib_out)
-        public ImageButton exit_Button;
-
-        @FindBy(R.id.f_filterDateTextView)
-        public TextView filterDate_TextView;
-
-        //@FindBy(R.id.f_timeToOutTextView)
-        //public TextView timeToOutTextView;
-    }
-
     public Labels labels;
-
-    public static class Labels{
-
-        @FindBy(R.id.editText_averageTimeLabel)
-        public TextView averageTime;
-
-        @FindBy(R.id.editText_missingTimeLabel)
-        public TextView missingTime;
-    }
-
-    public interface ITimeNumbers{
-        ImageView ah1 = null;
-
-        ImageView ah2 = null;
-
-        ImageView ahm_spliter = null;
-
-        ImageView am1 = null;
-
-        ImageView am2 = null;
-
-        ImageView ams_spliter = null;
-
-        ImageView as1 = null;
-
-        ImageView as2 = null;
-    }
 
     public AverageTimeNumbers averageTimeNumbers;
 
-    public static class AverageTimeNumbers implements ITimeNumbers{
-
-        @FindBy(R.id.iv_ah1)
-        public ImageView ah1;
-
-        @FindBy(R.id.iv_ah2)
-        public ImageView ah2;
-
-        @FindBy(R.id.iv_ahm_spliter)
-        public ImageView ahm_spliter;
-
-        @FindBy(R.id.iv_am1)
-        public ImageView am1;
-
-        @FindBy(R.id.iv_am2)
-        public ImageView am2;
-
-        @FindBy(R.id.iv_ams_spliter)
-        public ImageView ams_spliter;
-
-        @FindBy(R.id.iv_as1)
-        public ImageView as1;
-
-        @FindBy(R.id.iv_as2)
-        public ImageView as2;
-    }
-
     public ImageRow dateImageRow;
-
 
     public MissingTimeNumbers missingTimeNumbers;
 
-    public static class MissingTimeNumbers implements ITimeNumbers{
-
-        @FindBy(R.id.iv_mh1)
-        public ImageView ah1;
-
-        @FindBy(R.id.iv_mh2)
-        public ImageView ah2;
-
-        @FindBy(R.id.iv_mhm_spliter)
-        public ImageView ahm_spliter;
-
-        @FindBy(R.id.iv_mm1)
-        public ImageView am1;
-
-        @FindBy(R.id.iv_mm2)
-        public ImageView am2;
-
-        @FindBy(R.id.iv_mms_spliter)
-        public ImageView ams_spliter;
-
-        @FindBy(R.id.iv_ms1)
-        public ImageView as1;
-
-        @FindBy(R.id.iv_ms2)
-        public ImageView as2;
-    }
-
     public TimeToExitNumbers timeToExitNumbers;
-
-    public static class TimeToExitNumbers implements ITimeNumbers{
-
-        @FindBy(R.id.iv_a17)
-        public ImageView ah1;
-
-        @FindBy(R.id.iv_a18)
-        public ImageView ah2;
-
-        @FindBy(R.id.iv_a19)
-        public ImageView ahm_spliter;
-
-        @FindBy(R.id.iv_a20)
-        public ImageView am1;
-
-        @FindBy(R.id.iv_a21)
-        public ImageView am2;
-
-        @FindBy(R.id.iv_a22)
-        public ImageView ams_spliter;
-
-        @FindBy(R.id.iv_a23)
-        public ImageView as1;
-
-        @FindBy(R.id.iv_a24)
-        public ImageView as2;
-    }
 
     public DateNumbers dateNumbers;
 
-    public static class DateNumbers{
-
-        @FindBy(R.id.iv_a2)
-        public ImageView dd1;
-
-        @FindBy(R.id.iv_a3)
-        public ImageView dd2;
-
-        @FindBy(R.id.iv_a4)
-        public ImageView dm_spliter;
-
-        @FindBy(R.id.iv_a5)
-        public ImageView mm1;
-
-        @FindBy(R.id.iv_a6)
-        public ImageView mm2;
-
-        @FindBy(R.id.iv_a7)
-        public ImageView my_spliter;
-
-        @FindBy(R.id.iv_a8)
-        public ImageView yy1;
-
-        @FindBy(R.id.iv_a9)
-        public ImageView yy2;
-
-        @FindBy(R.id.iv_a10)
-        public ImageView yy3;
-
-        @FindBy(R.id.iv_a11)
-        public ImageView yy4;
-    }
-
     public DateTextViewNumbers dateTextViewNumbers;
-
-    public static class DateTextViewNumbers{
-        @FindBy(R.id.tv_a2)
-        public TextView dd1;
-
-        @FindBy(R.id.tv_a3)
-        public TextView dd2;
-
-        @FindBy(R.id.tv_a4)
-        public TextView dm_spliter;
-
-        @FindBy(R.id.tv_a5)
-        public TextView mm1;
-
-        @FindBy(R.id.tv_a6)
-        public TextView mm2;
-
-        @FindBy(R.id.tv_a7)
-        public TextView my_spliter;
-
-        @FindBy(R.id.tv_a8)
-        public TextView yy1;
-
-        @FindBy(R.id.tv_a9)
-        public TextView yy2;
-
-        @FindBy(R.id.tv_a10)
-        public TextView yy3;
-
-        @FindBy(R.id.tv_a11)
-        public TextView yy4;
-    }
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -276,7 +93,6 @@ public class VisitTimeFixerActivity extends AppCompatActivity
         this.instance = this;
 
         controls = new Controls();
-
         ActivityFactory.InitActivity(this, controls);
         ActivityFactory.setListener(this, controls);
 
@@ -598,7 +414,6 @@ public class VisitTimeFixerActivity extends AppCompatActivity
     }
 
     public void unScaleAnimation(){
-
         Animation unScale = AnimationUtils.loadAnimation(this, R.anim.unscale);
         controls.entrance_Button.startAnimation(unScale);
     }
@@ -615,10 +430,6 @@ public class VisitTimeFixerActivity extends AppCompatActivity
     }
 
     public static void refresh(){
-        TextView e1 = (TextView)instance.findViewById(R.id.editText_averageTimeValue);
-        //TextView e2 = (TextView)instance.findViewById(R.id.editText_missingTimeValue);
-        TextView h2 = (TextView)instance.findViewById(R.id.editText_missingTimeLabel);
-
         String missingTimeHeader = "ОСТАВШЕЕСЯ";
         String missingTime = DBController.getMissingTimeToSimpleString();
         if(missingTime.contains("-")) {
@@ -626,7 +437,7 @@ public class VisitTimeFixerActivity extends AppCompatActivity
             missingTime = missingTime.replace("-","").replace(" ", "");
         }
 
-        h2.setText(missingTimeHeader);
+        instance.labels.missingTime.setText(missingTimeHeader);
         instance.setAverageTime(DBController.getAverageTimeToSimpleString());
         instance.setMissingTime(missingTime);
 
@@ -658,12 +469,12 @@ public class VisitTimeFixerActivity extends AppCompatActivity
             //case 1:
             //    mTitle = getString(R.string.title_section1);
             //    break;
-            case 2:
-                mTitle = getString(R.string.title_section2);
-                break;
-            case 3:
-                mTitle = getString(R.string.title_section3);
-                break;
+//            case 2:
+//                mTitle = getString(R.string.title_section2);
+//                break;
+//            case 3:
+//                mTitle = getString(R.string.title_section3);
+//                break;
         }
     }
 
@@ -734,11 +545,6 @@ public class VisitTimeFixerActivity extends AppCompatActivity
             else
                 new YesNoDialog(this, new DoExitCommand(), "Изменить выбранную запись ?").show();
         }
-//        else if(v.idEquals(controls.exit_Button)) {
-//            //scaleAnimation(controls.exit_Button);
-//            rotateAnimation(controls.exit_Button);
-//            new YesNoDialog(this, new DoExitCommand(), "Изменить выбранную запись ?").show();
-//        }
         else if(v.idEquals(controls.filterDate_TextView)) {
             new DatePickerDialogImpl(this, date, new SetDateFilterCommand()).show();
         }

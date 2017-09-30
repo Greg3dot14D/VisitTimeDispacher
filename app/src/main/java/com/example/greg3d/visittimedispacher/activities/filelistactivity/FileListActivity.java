@@ -1,10 +1,8 @@
-package com.example.greg3d.visittimedispacher;
+package com.example.greg3d.visittimedispacher.activities.filelistactivity;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +13,9 @@ import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.TextView;
 
+import com.example.greg3d.visittimedispacher.R;
+import com.example.greg3d.visittimedispacher.activities.filelistactivity.adapters.CellAdapter;
+import com.example.greg3d.visittimedispacher.activities.filelistactivity.controls.Controls;
 import com.example.greg3d.visittimedispacher.command.DoExportCommand;
 import com.example.greg3d.visittimedispacher.command.DoImportCommand;
 import com.example.greg3d.visittimedispacher.dialog.YesNoDialog;
@@ -22,11 +23,7 @@ import com.example.greg3d.visittimedispacher.framework.annotations.FindBy;
 import com.example.greg3d.visittimedispacher.framework.factory.ActivityFactory;
 import com.example.greg3d.visittimedispacher.framework.helpers.ViewHelper;
 import com.example.greg3d.visittimedispacher.helpers.CSVHelper;
-import com.example.greg3d.visittimedispacher.helpers.DBHelper;
 import com.example.greg3d.visittimedispacher.helpers.Tools;
-import com.example.greg3d.visittimedispacher.model.DateRecord;
-
-import java.util.Date;
 
 /**
  * Created by greg3d on 22.04.17.
@@ -44,14 +41,6 @@ public class FileListActivity extends Activity implements View.OnClickListener {
     }
 
     public Controls controls;
-
-    public static class Controls {
-        @FindBy(R.id.et_fileName)
-        public EditText fileName_EditText;
-
-        @FindBy(R.id.b_saveFile)
-        public Button saveFile_Button;
-    }
 
     public static void setDoExport(){
         doExport = true;
@@ -110,28 +99,6 @@ public class FileListActivity extends Activity implements View.OnClickListener {
                 new YesNoDialog(this, new DoExportCommand(this), "Выполняем экспорт во внешний файл ?").showAndCloseActivity();
             else
                 new YesNoDialog(this, new DoImportCommand(this), "Выполняем импорт из текстового файла ?").showAndCloseActivity();
-        }
-    }
-
-    public class CellAdapter extends ArrayAdapter<String>
-    {
-        public CellAdapter(Context context) {
-            //super(context, android.R.layout.grid_cell, lCell);
-            super(context, R.layout.filelist_cell, CSVHelper.getInstance().getFileNameList());
-        }
-
-        @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
-            String cell = getItem(position);
-
-            if (convertView == null) {
-                convertView = LayoutInflater.from(getContext())
-                        //.inflate(android.R.layout.simple_list_item_2, null);
-                        .inflate(R.layout.filelist_cell, null);
-            }
-            ((TextView) convertView.findViewById(R.id.c_fileName))
-                    .setText(cell);
-            return convertView;
         }
     }
 }
