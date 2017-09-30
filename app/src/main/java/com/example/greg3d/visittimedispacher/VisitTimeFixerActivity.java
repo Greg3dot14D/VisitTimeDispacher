@@ -296,7 +296,6 @@ public class VisitTimeFixerActivity extends AppCompatActivity
 
         dateTextViewNumbers = new DateTextViewNumbers();
         ActivityFactory.InitActivity(this, dateTextViewNumbers);
-        //ActivityFactory.InitTextViews(this, dateTextViewNumbers, "fonts/ds-digital-bold.ttf");
 
         dateNumbers = new DateNumbers();
         ActivityFactory.InitActivity(this, dateNumbers);
