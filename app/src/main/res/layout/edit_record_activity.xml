@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/window_wood_flat"
+    android:orientation="vertical"
+    >
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:id="@+id/er_fake1"
+        android:layout_alignParentTop="true"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/er_entranceData"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Вход :"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:ems="10"
+            android:id="@+id/tv_LabelEntrance"
+            android:layout_gravity="right"
+            android:layout_marginLeft="10dp" />
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text = "01.01.2017"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:ems="10"
+            android:id="@+id/tv_DateEntrance"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_alignBottom="@+id/tv_TimeEntrance" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text = "00:00:00"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:ems="10"
+            android:id="@+id/tv_TimeEntrance"
+            android:layout_gravity="right"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/tv_DateEntrance"
+            android:layout_toEndOf="@+id/tv_DateEntrance" />
+
+    </RelativeLayout>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:id="@+id/er_fake2"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+    </TableRow>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/er_exitData"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" >
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Выход :"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:ems="10"
+            android:id="@+id/tv_LabelExit"
+            android:layout_gravity="right"
+            android:layout_marginLeft="10dp" />
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="01.01.2017"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:ems="10"
+            android:id="@+id/tv_DateExit"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="00:00:00"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:ems="10"
+            android:id="@+id/tv_TimeExit"
+            android:layout_gravity="right"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/tv_DateExit"
+            android:layout_toEndOf="@+id/tv_DateExit" />
+    </RelativeLayout>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="113dp"
+        android:id="@+id/er_dayType"
+        android:layout_marginTop="44dp"
+        android:layout_below="@+id/er_row41"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:layout_width="250dp"
+            android:layout_height="99dp">
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="74dp"
+                android:layout_marginStart="74dp">
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Рабочий"
+                    android:textSize="20dp"
+                    android:id="@+id/rb_DayTypeWork" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Выходной"
+                    android:textSize="20dp"
+                    android:id="@+id/rb_DayTypeRest" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Прогул"
+                    android:textSize="20dp"
+                    android:id="@+id/rb_DayTypeOut" />
+            </RadioGroup>
+        </RelativeLayout>
+
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="135dp"
+        android:id="@+id/er_dayShort"
+        android:layout_alignTop="@+id/tv_Update"
+        android:layout_toLeftOf="@+id/tv_Cancel"
+        android:layout_toStartOf="@+id/tv_Cancel">
+
+        <RelativeLayout
+            android:layout_width="250dp"
+            android:layout_height="99dp">
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="74dp"
+                android:layout_alignParentBottom="true">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:id="@+id/er_fake3"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Длинный"
+                    android:textSize="20dp"
+                    android:id="@+id/rb_DayIsLong" />
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Короткий"
+                    android:textSize="20dp"
+                    android:id="@+id/rb_DayIsShort" />
+            </RadioGroup>
+
+        </RelativeLayout>
+    </TableRow>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/relativeLayout2">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="15dp">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:text="Save"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:textColor="#430fff"
+                android:id="@+id/tv_Update"
+                android:layout_gravity="bottom"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:gravity="center"
+                android:layout_weight="0.04" />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:text="Delete"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:textColor="#430fff"
+                android:ems="10"
+                android:id="@+id/tv_Delete"
+                android:layout_gravity="bottom"
+                android:layout_alignTop="@+id/tv_Update"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:layout_weight="0.04"
+                android:layout_marginLeft="10dp" />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:text="Cancel"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:textColor="#430fff"
+                android:ems="10"
+                android:id="@+id/tv_Cancel"
+                android:layout_gravity="bottom"
+                android:layout_alignTop="@+id/tv_Delete"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="15dp"
+                android:layout_marginEnd="5dp"
+                android:gravity="center"
+                android:layout_weight="0.04"
+                android:layout_marginLeft="15dp" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

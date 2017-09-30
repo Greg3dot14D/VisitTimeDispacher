@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_marginTop="0px"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/playlist_background"
+    >
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.79"
+        android:layout_marginTop="54px"
+        android:layout_marginBottom="5px"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:id="@+id/g_TL_Base">
+        <GridView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/gvBase">
+        </GridView>
+    </TableLayout>
+
+    <TableRow
+        android:background="@drawable/win_empty_background"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="55px"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        >
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="Insert"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="#443032"
+            android:ems="10"
+            android:id="@+id/tv_Insert"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical|center_horizontal" />
+
+    </TableRow>
+</LinearLayout>
