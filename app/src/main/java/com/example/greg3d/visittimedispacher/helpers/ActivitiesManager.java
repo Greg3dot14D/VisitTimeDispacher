@@ -15,7 +15,7 @@ import com.example.greg3d.visittimedispacher.activities.visittimefixeractivity.V
  */
 public class ActivitiesManager {
 
-    public static void startSomeActivity( Fragment fragment){
+    public static void startSomeActivity(Fragment fragment){
         Intent intent = new Intent(VisitTimeFixerActivity.instance , SomeActivity.class);
         fragment.startActivity(intent);
     }

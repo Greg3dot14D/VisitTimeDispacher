@@ -1,8 +1,6 @@
 package com.example.greg3d.visittimedispacher.activities.visittimefixeractivity;
 
 import android.app.Activity;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
@@ -69,21 +67,19 @@ public class VisitTimeFixerActivity extends AppCompatActivity
 
     private Date date;
 
-    public Controls controls;
+    private Controls controls;
 
-    public Labels labels;
+    private Labels labels;
 
-    public AverageTimeNumbers averageTimeNumbers;
+    private AverageTimeNumbers averageTimeNumbers;
 
-    public ImageRow dateImageRow;
+    private MissingTimeNumbers missingTimeNumbers;
 
-    public MissingTimeNumbers missingTimeNumbers;
+    private TimeToExitNumbers timeToExitNumbers;
 
-    public TimeToExitNumbers timeToExitNumbers;
+    private DateNumbers dateNumbers;
 
-    public DateNumbers dateNumbers;
-
-    public DateTextViewNumbers dateTextViewNumbers;
+    private DateTextViewNumbers dateTextViewNumbers;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -128,11 +124,6 @@ public class VisitTimeFixerActivity extends AppCompatActivity
         new DBHelper(this);
 
         createNumbersBitmap();
-
-        //dateImageRow = new ImageRow(numbersBitMap);
-        dateImageRow = new ImageRow(createCirilicBitmap());
-
-        ActivityFactory.InitActivity(this, dateImageRow);
 
         setDate(Calendar.getInstance().getTime());
         refresh();
@@ -219,33 +210,6 @@ public class VisitTimeFixerActivity extends AppCompatActivity
 //                Bitmap.createBitmap(bitmapSource, 9 * 2, (16) * 2, 5 * 2, bitmapSource.getHeight() - 18 * 2)
 //        ));
 //    }
-
-    private HashMap<String, Bitmap> createCirilicBitmap(){
-        HashMap<String, Bitmap> bitMap = new HashMap<>();
-        int width = 80;
-        int heigh = 118;
-        int hShift = 10;
-
-        //int xOffset = 54;
-        //int yOffset = 35;
-        int xOffset = 0;
-        int yOffset = 0;
-        Bitmap bitmapSource = BitmapFactory.decodeResource(getResources(), R.drawable.c3);
-        String[] row1 = "абвгдежзикл".split("");
-        String[] row2 = "мнопрстуфхц".split("");
-        String[] row3 = "чшщъыьэюя?!".split("");
-        String[] rowNum = "1234567890 ".split("");
-
-        for(int i = 0; i < 11; i ++){
-            //bitMap.put(row1[i + 1], Bitmap.createBitmap(bitmapSource, 40 + i * width, 20, width, heigh));
-            bitMap.put(row1[i + 1], Bitmap.createBitmap(bitmapSource, xOffset + i * width, yOffset, width, heigh));
-            bitMap.put(row2[i+1], Bitmap.createBitmap(bitmapSource, xOffset + i * width, yOffset + (heigh + hShift), width, heigh));
-            bitMap.put(row3[i+1], Bitmap.createBitmap(bitmapSource, xOffset + i * width, yOffset + (heigh + hShift) * 2, width, heigh));
-            bitMap.put(rowNum[i+1], Bitmap.createBitmap(bitmapSource, xOffset + i * width, bitmapSource.getHeight() - heigh, width, heigh));
-        }
-        return bitMap;
-    }
-
 
     private NumbersImageBitmapHelper numbersBitMapHelper;
 

@@ -67,7 +67,7 @@
                             android:layout_width="10dp"
                             android:layout_height="match_parent"
                             android:id="@+id/iv_a2"
-                            android:layout_weight="0.04"/>
+                            android:layout_weight="0.04" />
                         <ImageView
                             android:layout_width="10dp"
                             android:layout_height="match_parent"
@@ -332,7 +332,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
                 android:id="@+id/tr_timers"
-                android:background="@drawable/display_eq_bkg"
+                android:background="@drawable/display_eq_bkg_alfa_106"
                 >
 
                 <ImageView
@@ -404,7 +404,6 @@
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="match_parent"
-                    android:id="@+id/iv_ablock_mblock_spliter"
                     android:layout_weight="0.20" />
 
 

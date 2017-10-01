@@ -63,7 +63,8 @@ public class SomeActivity extends Activity implements View.OnClickListener{
         gridView.setAdapter(adapter);
 
         // Интервал между строк
-        gridView.setVerticalSpacing(5);
+        //gridView.setVerticalSpacing(5);
+        gridView.setVerticalSpacing(0);
         // Интервал между столбцов
         gridView.setHorizontalSpacing(10);
 
